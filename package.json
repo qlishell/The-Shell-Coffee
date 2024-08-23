@@ -1,57 +1,57 @@
 {
-  "name": "the-coffee-shop",
-  "private": true,
-  "version": "1.0.0",
-  "description": "zmp-blank-templates",
-  "repository": "",
-  "license": "UNLICENSED",
-  "browserslist": [
-    "Android >= 5",
-    "IOS >= 9.3",
-    "Edge >= 15",
-    "Safari >= 9.1",
-    "Chrome >= 49",
-    "Firefox >= 31",
-    "Samsung >= 5"
-  ],
-  "scripts": {
-    "start": "zmp start",
-    "deploy": "zmp deploy",
-    "build:css": "postcss src/css/tailwind.css -o src/css/styles.css",
-    "prepare": "husky"
-  },
-  "dependencies": {
-    "@types/lodash": "^4.17.7",
-    "@vitejs/plugin-react": "^1.3.2",
-    "lodash": "^4.17.21",
-    "prop-types": "^15.8.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.0",
-    "recoil": "^0.7.7",
-    "zmp-sdk": "latest",
-    "zmp-ui": "latest"
-  },
-  "devDependencies": {
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.0",
-    "@types/react-router-dom": "^5.3.3",
-    "autoprefixer": "^10.4.19",
-    "cross-env": "^7.0.3",
-    "husky": "^9.1.5",
-    "lint-staged": "^15.2.9",
-    "postcss": "^8.4.38",
-    "postcss-aspect-ratio-polyfill": "^2.0.0",
-    "postcss-cli": "^8.3.1",
-    "postcss-preset-env": "^6.7.0",
-    "prettier": "3.3.3",
-    "sass": "^1.76.0",
-    "tailwindcss": "^3.4.3",
-    "vite": "^2.6.14",
-    "vite-tsconfig-paths": "4.0.5"
-  },
-  "lint-staged":{
-    "**/*.{js,jsx,ts,tsx,vue}":
-       "prettier --write --ignore-unknown"
-  }
+    "name": "the-coffee-shop",
+    "private": true,
+    "version": "1.0.0",
+    "description": "zmp-blank-templates",
+    "repository": "",
+    "license": "UNLICENSED",
+    "browserslist": [
+        "Android >= 5",
+        "IOS >= 9.3",
+        "Edge >= 15",
+        "Safari >= 9.1",
+        "Chrome >= 49",
+        "Firefox >= 31",
+        "Samsung >= 5"
+    ],
+    "scripts": {
+        "start": "zmp start",
+        "deploy": "zmp deploy",
+        "build:css": "postcss src/css/tailwind.css -o src/css/styles.css",
+        "prepare": "husky"
+    },
+    "dependencies": {
+        "@types/lodash": "^4.17.7",
+        "@vitejs/plugin-react": "^1.3.2",
+        "lodash": "^4.17.21",
+        "prop-types": "^15.8.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^6.23.0",
+        "recoil": "^0.7.7",
+        "swiper": "^11.1.10",
+        "zmp-sdk": "latest",
+        "zmp-ui": "latest"
+    },
+    "devDependencies": {
+        "@types/react": "^18.3.1",
+        "@types/react-dom": "^18.3.0",
+        "@types/react-router-dom": "^5.3.3",
+        "autoprefixer": "^10.4.19",
+        "cross-env": "^7.0.3",
+        "husky": "^9.1.5",
+        "lint-staged": "^15.2.9",
+        "postcss": "^8.4.38",
+        "postcss-aspect-ratio-polyfill": "^2.0.0",
+        "postcss-cli": "^8.3.1",
+        "postcss-preset-env": "^6.7.0",
+        "prettier": "3.3.3",
+        "sass": "^1.76.0",
+        "tailwindcss": "^3.4.3",
+        "vite": "^2.6.14",
+        "vite-tsconfig-paths": "4.0.5"
+    },
+    "lint-staged": {
+        "**/*.{js,jsx,ts,tsx,vue}": "prettier --write --ignore-unknown"
+    }
 }
