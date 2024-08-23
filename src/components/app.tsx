@@ -1,21 +1,27 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import { App, ZMPRouter, AnimationRoutes, SnackbarProvider } from "zmp-ui";
 import { RecoilRoot } from "recoil";
-import HomePage from "pages/index";
+import { getConfig } from "utils/config";
+import { App, SnackbarProvider, ZMPRouter } from "zmp-ui";
+import { ConfigProvider } from "./config-provider";
+import { Layout } from "./layout";
 
 const MyApp = () => {
     return (
         <RecoilRoot>
-            <App>
-                <SnackbarProvider>
-                    <ZMPRouter>
-                        <AnimationRoutes>
-                            <Route path="/" element={<HomePage></HomePage>}></Route>
-                        </AnimationRoutes>
-                    </ZMPRouter>
-                </SnackbarProvider>
-            </App>
+            <ConfigProvider
+                cssVariables={{
+                    "--zmp-primary-color": getConfig(c => c.template.primaryColor),
+                    "--zmp-background-color": "#f4f5f6",
+                }}
+            >
+                <App>
+                    <SnackbarProvider>
+                        <ZMPRouter>
+                            <Layout />
+                        </ZMPRouter>
+                    </SnackbarProvider>
+                </App>
+            </ConfigProvider>
         </RecoilRoot>
     );
 };
