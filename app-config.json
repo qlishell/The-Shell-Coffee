@@ -1,20 +1,26 @@
 {
-  "app": {
-    "title": "the-coffee-shop",
-    "headerTitle": "zmp-blank-templates",
-    "headerColor": "#1843EF",
-    "textColor": "white",
-    "textAlign": "left",
-    "statusBarColor": "#1843EF",
-    "leftButton": "back",
-    "statusBar": "normal",
-    "actionBarHidden": false,
-    "hideAndroidBottomNavigationBar": false,
-    "hideIOSSafeAreaBottom": false
-  },
-  "debug": false,
-  "pages": [],
-  "listCSS": [],
-  "listSyncJS": [],
-  "listAsyncJS": []
+    "app": {
+        "title": "the-coffee-shop",
+        "headerTitle": "zmp-blank-templates",
+        "headerColor": "",
+        "textColor": "black",
+        "statusBarColor": "#ffffff",
+        "leftButton": "none",
+        "statusBar": "transparent",
+        "selfControlLoading": false,
+        "hideAndroidBottomNavigationBar": false,
+        "hideIOSSafeAreaBottom": false,
+        "actionBarHidden": true
+    },
+    "debug": false,
+    "pages": [],
+    "listCSS": [],
+    "listSyncJS": [],
+    "listAsyncJS": [],
+    "template": {
+        "primaryColor": "#006af5",
+        "prefixCurrencySymbol": false,
+        "currencySymbol": "đ",
+        "headerLogo": ""
+    }
 }
