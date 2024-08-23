@@ -10,7 +10,7 @@ import "css/tailwind.scss";
 // Your stylesheet
 import "css/app.scss";
 
-// Style Swiper
+// import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/pagination";
 
