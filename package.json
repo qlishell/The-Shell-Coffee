@@ -17,7 +17,8 @@
   "scripts": {
     "start": "zmp start",
     "deploy": "zmp deploy",
-    "build:css": "postcss src/css/tailwind.css -o src/css/styles.css"
+    "build:css": "postcss src/css/tailwind.css -o src/css/styles.css",
+    "prepare": "husky"
   },
   "dependencies": {
     "@types/lodash": "^4.17.7",
@@ -37,13 +38,20 @@
     "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.19",
     "cross-env": "^7.0.3",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
     "postcss": "^8.4.38",
     "postcss-aspect-ratio-polyfill": "^2.0.0",
     "postcss-cli": "^8.3.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "3.3.3",
     "sass": "^1.76.0",
     "tailwindcss": "^3.4.3",
     "vite": "^2.6.14",
     "vite-tsconfig-paths": "4.0.5"
+  },
+  "lint-staged":{
+    "**/*.{js,jsx,ts,tsx,vue}":
+       "prettier --write --ignore-unknown"
   }
 }
