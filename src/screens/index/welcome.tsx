@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 import { useRecoilValueLoadable } from "recoil";
-import { userState } from "states";
-import logo from "static/shell-high-logo.png";
-import { getConfig } from "utils/config";
 import { Box, Header, Text } from "zmp-ui";
+
+import logo from "assets/images/shell-high-logo.png";
+import { userState } from "states";
+import { getConfig } from "utils/config";
 import appConfig from "../../../app-config.json";
 
 export const Welcome: FC = () => {
@@ -19,6 +20,7 @@ export const Welcome: FC = () => {
                         <img
                             className="w-8 h-8 rounded-lg border-inset"
                             src={getConfig(c => c.template.headerLogo) || logo}
+                            alt="logo"
                         />
                         <Box>
                             <Text.Title size="small">{appConfig.app.title}</Text.Title>
