@@ -6,9 +6,9 @@ import { createRoot } from "react-dom/client";
 import "zmp-ui/zaui.css";
 
 // Tailwind stylesheet
-import "css/tailwind.scss";
+import "assets/css/tailwind.scss";
 // Your stylesheet
-import "css/app.scss";
+import "assets/css/app.scss";
 
 // import Swiper and modules styles
 import "swiper/css";
@@ -21,6 +21,6 @@ if (!window.APP_CONFIG) {
 }
 
 // Mount the app
-import App from "components/app";
+import App from "layout/app";
 const root = createRoot(document.getElementById("app")!);
 root.render(React.createElement(App));
