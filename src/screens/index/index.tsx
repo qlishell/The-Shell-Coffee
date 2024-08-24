@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Page, useNavigate } from "zmp-ui";
+
 import { Welcome } from "./welcome";
 
 const HomePage: React.FunctionComponent = () => {
