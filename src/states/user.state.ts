@@ -1,6 +1,12 @@
 import { selector } from "recoil";
 import { getUserInfo } from "zmp-sdk";
 
+/**
+ * Recoil selector lấy thông tin người dùng từ Zalo SDK.
+ * **Note:** selector sẽ tự động yêu cầu quyền nếu cần.
+ *
+ * @returns {Promise<UserInfo>} - Promise giải quyết đối tượng thông tin người dùng.
+ */
 export const userState = selector({
     key: "user",
     get: async () => {
