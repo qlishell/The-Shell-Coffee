@@ -1,5 +1,8 @@
+import { createOrder } from "zmp-sdk";
+
 import { SelectedOptions } from "types/cart";
 import { Option, Product } from "types/product";
+import { getConfig } from "./config";
 
 /**
  * Tạo URL cho hình ảnh giả từ tên tệp.
@@ -96,3 +99,23 @@ export function isIdentical(option1: SelectedOptions, option2: SelectedOptions):
 
     return true;
 }
+
+/**
+ * Bắt đầu quy trình thanh toán bằng thư viện của bên thứ ba (giả định).
+ *
+ * @param {number} amount
+ * @param {string} description
+ * @returns {void}
+ */
+export const pay = (amount: number, description?: string) =>
+    createOrder({
+        desc: description ?? `Thanh toán cho ${getConfig(config => config.app.title)}`,
+        item: [],
+        amount: amount,
+        success: data => {
+            console.log("Payment success: ", data);
+        },
+        fail: err => {
+            console.log("Payment error: ", err);
+        },
+    });
