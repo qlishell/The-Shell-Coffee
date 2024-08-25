@@ -22,3 +22,13 @@ export const ProductSlideSkeleton: FC = () => {
         </div>
     );
 };
+
+export const ProductItemSkeleton: FC = () => {
+    return (
+        <div className="space-y-2">
+            <ImageSkeleton className="w-full aspect-square rounded-lg" />
+            <TextSkeleton>1234567890</TextSkeleton>
+            <TextSkeleton size="xxSmall">20,000đ</TextSkeleton>
+        </div>
+    );
+};
