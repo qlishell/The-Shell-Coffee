@@ -3,6 +3,11 @@ import { selector } from "recoil";
 import { Product, Variant } from "types/product";
 import { wait } from "utils/async";
 
+/**
+ * Recoil selector tìm nạp và xử lý dữ liệu sản phẩm.
+ *
+ * @returns {Promise<Product[]>} - Tạo một mảng mới với các đối tượng là kiểu `Product`.
+ */
 export const productsState = selector<Product[]>({
     key: "products",
     get: async () => {
@@ -19,6 +24,12 @@ export const productsState = selector<Product[]>({
     },
 });
 
+/**
+ * Recoil selector truy xuất và lọc các sản phẩm được đề xuất.
+ *
+ * @param {object} { get } - get để truy cập vào các selector khác.
+ * @returns {Product[]} - Mảng `Product` đại diện cho các sản phẩm được đề xuất.
+ */
 export const recommendProductsState = selector<Product[]>({
     key: "recommendProducts",
     get: ({ get }) => {
