@@ -3,7 +3,7 @@ import { useRecoilValueLoadable } from "recoil";
 import { Box, Header, Text } from "zmp-ui";
 
 import logo from "assets/images/shell-high-logo.png";
-import { userState } from "states";
+import { userState } from "states/user.state";
 import { getConfig } from "utils/config";
 import appConfig from "../../../app-config.json";
 
