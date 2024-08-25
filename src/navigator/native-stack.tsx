@@ -4,6 +4,7 @@ import { getSystemInfo } from "zmp-sdk";
 import { Box } from "zmp-ui";
 
 import HomePage from "screens/index";
+import { Navigation } from "./bottom-tab";
 
 if (getSystemInfo().platform === "android") {
     const androidSafeTop = Math.round(
@@ -20,6 +21,7 @@ export const NativeStack: FC = () => {
                     <Route path="/" element={<HomePage />}></Route>
                 </Routes>
             </Box>
+            <Navigation />
         </Box>
     );
 };
