@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+
 import { getConfig } from "utils/config";
 
 export const DisplayPrice: FC<{ children: number }> = ({ children }) => {
