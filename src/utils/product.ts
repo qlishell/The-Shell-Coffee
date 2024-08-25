@@ -63,3 +63,36 @@ export function calcFinalPrice(product: Product, options?: SelectedOptions): num
     }
     return finalPrice;
 }
+
+/**
+ * Kiểm tra xem hai đối tượng SelectedOptions có giống nhau hay không.
+ * **Lưu ý:** Hàm này có thể so sánh cả các mảng và các giá trị đơn giản.
+ *
+ * @param {SelectedOptions} option1 - Đối tượng SelectedOptions đầu tiên.
+ * @param {SelectedOptions} option2 - Đối tượng SelectedOptions thứ hai.
+ * @returns {boolean} True nếu hai đối tượng giống nhau, false nếu không.
+ */
+export function isIdentical(option1: SelectedOptions, option2: SelectedOptions): boolean {
+    const option1Keys = Object.keys(option1);
+    const option2Keys = Object.keys(option2);
+
+    if (option1Keys.length !== option2Keys.length) {
+        return false;
+    }
+
+    for (const key of option1Keys) {
+        const option1Value = option1[key];
+        const option2Value = option2[key];
+
+        const areEqual =
+            Array.isArray(option1Value) &&
+            Array.isArray(option2Value) &&
+            [...option1Value].sort().toString() === [...option2Value].sort().toString();
+
+        if (option1Value !== option2Value && !areEqual) {
+            return false;
+        }
+    }
+
+    return true;
+}
