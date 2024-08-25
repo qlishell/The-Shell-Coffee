@@ -11,7 +11,19 @@ export function getDummyImage(filename: string): string {
     return `https://stc-zmp.zadn.vn/templates/zaui-coffee/dummy/${filename}`;
 }
 
-export function calcFinalPrice(product: Product, options?: SelectedOptions) {
+/**
+ * Tính toán giá cuối cùng của một sản phẩm dựa trên giá gốc, giảm giá và các tùy chọn đã chọn.
+ *
+ * Hàm này thực hiện việc tính toán giá cuối cùng của một sản phẩm bằng cách:
+ *   1. Lấy giá gốc của sản phẩm.
+ *   2. Áp dụng giảm giá (nếu có) theo loại giảm giá (cố định hoặc phần trăm).
+ *   3. Tính toán thêm giá cho các tùy chọn đã chọn (nếu có).
+ *
+ * @param {Product} product - Đối tượng sản phẩm, bao gồm các thông tin về giá, giảm giá và các biến thể.
+ * @param {SelectedOptions} options - Đối tượng chứa các tùy chọn đã chọn cho sản phẩm.
+ * @returns {number} Giá cuối cùng của sản phẩm sau khi tính toán.
+ */
+export function calcFinalPrice(product: Product, options?: SelectedOptions): number {
     let finalPrice = product.price;
     if (product.sale) {
         if (product.sale.type === "fixed") {
