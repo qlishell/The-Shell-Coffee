@@ -2,7 +2,7 @@ import React from "react";
 import { RecoilRoot } from "recoil";
 import { App, SnackbarProvider, ZMPRouter } from "zmp-ui";
 
-import { Layout } from "./layout";
+import { NativeStack } from "navigator/native-stack";
 
 const MyApp = () => {
     return (
@@ -10,7 +10,7 @@ const MyApp = () => {
             <App>
                 <SnackbarProvider>
                     <ZMPRouter>
-                        <Layout />
+                        <NativeStack />
                     </ZMPRouter>
                 </SnackbarProvider>
             </App>
