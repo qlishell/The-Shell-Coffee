@@ -110,7 +110,7 @@ zmp init
 
 <div style="display: flex; justify-content: space-between;">
   <img src="assets/images/BannerScreen.jpg" alt="BannerScreen" style="flex: 1; width: 30px; margin-right: 10px;"/>
-  <img src="assets/images/HomeScreen.jpg" alt="HomeScreen" style="flex: 1; width: 30p; margin-right: 10px;"/>
+  <img src="assets/images/HomeScreen.jpg" alt="HomeScreen" style="flex: 1; width: 30px; margin-right: 10px;"/>
   <img src="assets/images/CartScreen.jpg" alt="DetailScreen" style="flex: 1; width: 30px;"/>
 </div>
 
