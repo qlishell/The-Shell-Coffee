@@ -28,6 +28,11 @@ export const requestPhoneTriesState = atom({
     default: 0,
 });
 
+/**
+ * Selector để lấy số điện thoại của người dùng.
+ *
+ * @returns {Promise<string|boolean>} - Một Promise giải quyết thành một chuỗi đại diện cho số điện thoại nếu lấy được, hoặc `false` nếu không lấy được.
+ */
 export const phoneState = selector<string | boolean>({
     key: "phone",
     get: async ({ get }) => {
