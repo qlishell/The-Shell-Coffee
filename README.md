@@ -97,3 +97,41 @@ zmp init
 ## Chuyển đổi nhanh Web App có sẵn thành Zalo Mini App
 
 [Read more](https://mini.zalo.me/intro/convert-web-app-to-zalo-mini-app/)
+
+## Deploy Development
+
+Ứng dụng đã được khởi động trên Zalo App, cho phép bạn xem trước trên thiết bị di động bằng cách quét mã QR.
+
+![image](assets/images/QRZaloMiniApp.png)
+
+---
+
+**Hình ảnh từ Zalo Mini App**
+
+<div style="display: flex;">
+  <img src="assets/images/BannerScreen.jpg" alt="BannerScreen" style="flex: 1;"/>
+  <img src="assets/images/HomeScreen.jpg" alt="HomeScreen" style="flex: 1;"/>
+  <img src="assets/images/CartScreen.jpg" alt="HomeScreen" style="flex: 1;"/>
+</div>
+
+---
+
+Trong quá trình phát triển ứng dụng, việc triển khai phiên bản Development là bước quan trọng giúp bạn kiểm tra, thử nghiệm và đảm bảo rằng mọi tính năng hoạt động như mong đợi trước khi phát hành chính thức. Dưới đây là các bước để triển khai phiên bản Development của ứng dụng.
+
+-   **Bước 1: Chuẩn bị Môi trường Development**
+
+    Trước khi triển khai, hãy đảm bảo rằng bạn đã thiết lập đầy đủ môi trường development trên máy tính của mình, bao gồm các công cụ cần thiết như Node.js, zmp-cli, và Zalo App.
+
+-   **Bước 2: Cài đặt Dependencies**
+
+    Chạy lệnh dưới đây để cài đặt tất cả các dependencies cần thiết:
+
+    ```bash
+    npm install
+    ```
+
+-   **Bước 3: Khởi chạy Ứng dụng**
+
+    ```bash
+    npm run start
+    ```
