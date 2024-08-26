@@ -98,7 +98,7 @@ zmp init
 
 [Read more](https://mini.zalo.me/intro/convert-web-app-to-zalo-mini-app/)
 
-## Deploy Development
+## Deploy Zalo Mini App Development
 
 Ứng dụng đã được khởi động trên Zalo App, cho phép bạn xem trước trên thiết bị di động bằng cách quét mã QR.
 
@@ -108,10 +108,10 @@ zmp init
 
 **Hình ảnh từ Zalo Mini App**
 
-<div style="display: flex;">
-  <img src="assets/images/BannerScreen.jpg" alt="BannerScreen" style="flex: 1;"/>
-  <img src="assets/images/HomeScreen.jpg" alt="HomeScreen" style="flex: 1;"/>
-  <img src="assets/images/CartScreen.jpg" alt="HomeScreen" style="flex: 1;"/>
+<div style="display: flex; justify-content: space-between;">
+  <img src="assets/images/BannerScreen.jpg" alt="BannerScreen" style="flex: 1; max-width: 30%; margin-right: 10px;"/>
+  <img src="assets/images/HomeScreen.jpg" alt="HomeScreen" style="flex: 1; max-width: 30%; margin-right: 10px;"/>
+  <img src="assets/images/CartScreen.jpg" alt="DetailScreen" style="flex: 1; max-width: 30%;"/>
 </div>
 
 ---
