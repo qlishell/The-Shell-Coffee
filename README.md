@@ -109,9 +109,9 @@ zmp init
 **Hình ảnh từ Zalo Mini App**
 
 <div style="display: flex; justify-content: space-between;">
-  <div style="flex: 1; width: 200px; margin-right: 10px;"><img src="assets/images/BannerScreen.jpg" alt="BannerScreen"/></div>
-  <div style="flex: 1; width: 200px; margin-right: 10px;"><img src="assets/images/HomeScreen.jpg" alt="HomeScreen"/></div>
-  <div style="flex: 1; width: 200px;"><img src="assets/images/CartScreen.jpg" alt="CartScreen"/></div>
+  <img src="assets/images/BannerScreen.jpg" alt="BannerScreen" style="flex: 1; width: 200px; margin-right: 10px;"/>
+  <img src="assets/images/HomeScreen.jpg" alt="HomeScreen" style="flex: 1; width: 200px; margin-right: 10px;"/>
+  <img src="assets/images/CartScreen.jpg" alt="CartScreen" style="flex: 1; width: 200px;"/>
 </div>
 
 ---
