@@ -1,1 +1,21 @@
-{"app":{"title":"Hoang Kiet Nguyen Huu","headerTitle":"zmp-blank-templates","headerColor":"","textColor":"black","statusBarColor":"#ffffff","leftButton":"none","statusBar":"transparent","selfControlLoading":false,"hideAndroidBottomNavigationBar":false,"hideIOSSafeAreaBottom":false,"actionBarHidden":true},"debug":false,"pages":[],"listCSS":["assets/style.605cdf25.css"],"listSyncJS":["assets/index.77574d84.module.js"],"listAsyncJS":["assets/vendor.5a9f623d.module.js"],"template":{"primaryColor":"#006af5","prefixCurrencySymbol":false,"currencySymbol":"đ","headerLogo":""}}
+{
+    "app": {
+        "title": "Hoang Kiet Nguyen Huu",
+        "headerTitle": "zmp-blank-templates",
+        "headerColor": "",
+        "textColor": "black",
+        "statusBarColor": "#ffffff",
+        "leftButton": "none",
+        "statusBar": "transparent",
+        "selfControlLoading": false,
+        "hideAndroidBottomNavigationBar": false,
+        "hideIOSSafeAreaBottom": false,
+        "actionBarHidden": true
+    },
+    "debug": false,
+    "pages": [],
+    "listCSS": ["assets/style.605cdf25.css"],
+    "listSyncJS": ["assets/index.77574d84.module.js"],
+    "listAsyncJS": ["assets/vendor.5a9f623d.module.js"],
+    "template": { "primaryColor": "#006af5", "prefixCurrencySymbol": false, "currencySymbol": "đ", "headerLogo": "" }
+}

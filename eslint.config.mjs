@@ -12,40 +12,47 @@ const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
     baseDirectory: __dirname,
     recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
+    allConfig: js.configs.all,
 });
 
-export default [{
-    ignores: ["**/*.css", "**/*.svg"],
-}, ...compat.extends(
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-), {
-    plugins: {
-        "@typescript-eslint": typescriptEslint,
-        react,
+export default [
+    {
+        ignores: ["**/*.css", "**/*.svg"],
     },
-
-    languageOptions: {
-        globals: {
-            ...globals.browser,
+    ...compat.extends(
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+    ),
+    {
+        plugins: {
+            "@typescript-eslint": typescriptEslint,
+            react,
         },
 
-        parser: tsParser,
-        ecmaVersion: "latest",
-        sourceType: "module",
-    },
+        languageOptions: {
+            globals: {
+                ...globals.browser,
+            },
 
-    rules: {
-        "no-unused-vars": "warn",
-        "no-undef": "warn",
-        "@typescript-eslint/no-explicit-any": "warn",
-        "@typescript-eslint/no-unused-vars": "warn",
+            parser: tsParser,
+            ecmaVersion: "latest",
+            sourceType: "module",
+        },
 
-        "react/jsx-filename-extension": ["warn", {
-            extensions: [".tsx"],
-        }],
+        rules: {
+            "no-unused-vars": "warn",
+            "no-undef": "warn",
+            "@typescript-eslint/no-explicit-any": "warn",
+            "@typescript-eslint/no-unused-vars": "warn",
+
+            "react/jsx-filename-extension": [
+                "warn",
+                {
+                    extensions: [".tsx"],
+                },
+            ],
+        },
     },
-}];
+];
