@@ -8,7 +8,7 @@ export const DisplaySelectedOptions: FC<{
     options: SelectedOptions;
 }> = ({ children, options }) => {
     const description = useMemo(() => {
-        let variants: string[] = [];
+        const variants: string[] = [];
         if (children.variants) {
             const selectedVariants = Object.keys(options);
             children.variants

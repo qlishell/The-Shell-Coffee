@@ -24,7 +24,7 @@ export const TimePicker: FC = () => {
     const availableTimes = useMemo(() => {
         const times: Date[] = [];
         const now = new Date();
-        let time = new Date();
+        const time = new Date();
         if (now.getDate() === new Date(date).getDate()) {
             // Starting time is the current time rounded up to the nearest 30 minutes
             const minutes = Math.ceil(now.getMinutes() / 30) * 30;
