@@ -5,6 +5,7 @@ import { Box, Button, Text } from "zmp-ui";
 
 import { FinalPrice } from "components/display/final-price";
 import { Sheet } from "components/UI/fullscreen-sheet";
+import { useNavigate } from "react-router-dom";
 import { cartState } from "states/cart.state";
 import { SelectedOptions } from "types/cart";
 import { Product } from "types/product";
@@ -22,7 +23,7 @@ export interface ProductPickerProps {
     children: (methods: { open: () => void; close: () => void }) => ReactNode;
 }
 
-function getDefaultOptions(product?: Product) {
+export function getDefaultOptions(product?: Product) {
     if (product && product.variants) {
         return product.variants.reduce(
             (options, variant) =>
@@ -40,6 +41,7 @@ export const ProductPicker: FC<ProductPickerProps> = ({ children, product, selec
     const [options, setOptions] = useState<SelectedOptions>(selected ? selected.options : getDefaultOptions(product));
     const [quantity, setQuantity] = useState(1);
     const setCart = useSetRecoilState(cartState);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (selected) {
@@ -108,18 +110,17 @@ export const ProductPicker: FC<ProductPickerProps> = ({ children, product, selec
                 <Sheet visible={visible} onClose={() => setVisible(false)} autoHeight>
                     {product && (
                         <Box className="space-y-6 mt-2" p={4}>
-                            <Box className="space-y-2">
+                            <Box className="space-y-2 relative">
                                 <Text.Title>{product.name}</Text.Title>
                                 <Text>
                                     <FinalPrice options={options}>{product}</FinalPrice>
                                 </Text>
-                                <Text>
-                                    <div
-                                        dangerouslySetInnerHTML={{
-                                            __html: product.description ?? "",
-                                        }}
-                                    ></div>
-                                </Text>
+                                <Button
+                                    className="absolute top-0 right-0"
+                                    onClick={() => navigate(`/product/${product.id}`)}
+                                >
+                                    Xem chi tiết
+                                </Button>
                             </Box>
                             <Box className="space-y-5">
                                 {product.variants &&

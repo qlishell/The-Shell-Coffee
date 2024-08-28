@@ -3,8 +3,9 @@ import { Route, Routes } from "react-router";
 import { getSystemInfo } from "zmp-sdk";
 import { Box } from "zmp-ui";
 
-import CartPage from "screens/cart";
-import HomePage from "screens/index";
+import CartScreen from "screens/cart";
+import DetailScreen from "screens/detail";
+import HomeScreen from "screens/index";
 import { Navigation } from "./bottom-tab";
 
 if (getSystemInfo().platform === "android") {
@@ -19,8 +20,9 @@ export const NativeStack: FC = () => {
         <Box flex flexDirection="column" className="h-screen">
             <Box className="flex-1 flex flex-col overflow-hidden">
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/cart" element={<CartPage />} />
+                    <Route path="/" element={<HomeScreen />} />
+                    <Route path="/cart" element={<CartScreen />} />
+                    <Route path="/product/:productId" element={<DetailScreen />} />
                 </Routes>
             </Box>
             <Navigation />

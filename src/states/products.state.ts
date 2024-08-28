@@ -1,4 +1,4 @@
-import { selector } from "recoil";
+import { selector, selectorFamily } from "recoil";
 
 import { Product, Variant } from "types/product";
 import { wait } from "utils/async";
@@ -36,4 +36,20 @@ export const recommendProductsState = selector<Product[]>({
         const products = get(productsState);
         return products.filter(p => p.sale);
     },
+});
+
+/**
+ * Recoil selector lấy thông tin chi tiết của sản phẩm dựa trên ID.
+ *
+ * @param {number} id - ID của sản phẩm cần tìm.
+ * @returns {Product | undefined} - Trả về thông tin chi tiết của sản phẩm hoặc `undefined` nếu không tìm thấy.
+ */
+export const productDetailState = selectorFamily<Product | undefined, number>({
+    key: "productDetail",
+    get:
+        (id: number) =>
+        ({ get }) => {
+            const products = get(productsState);
+            return products.find(product => product.id === id);
+        },
 });
